@@ -1,0 +1,4 @@
+requests
+notion
+mistletoe
+bs4
