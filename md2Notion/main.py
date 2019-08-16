@@ -2,8 +2,10 @@ from notion.client import NotionClient
 import notion.block
 from mistletoe import Document
 from md2Notion.secret import get_secret
+from md2Notion.secret import get_url
 
 # Notion helpers
+# TODO: separate these into a couple classes for better organization
 
 
 def return_notion_client(secret_string):
@@ -21,8 +23,7 @@ def return_test_page(client):
     returns: notion page block for hardcoded testing ground
     """
 
-    url = "https://www.notion.so/Test-block-8b59ffcf77bd4816b1fb54f2157cf500"
-    return client.get_block(url)
+    return client.get_block(get_url())
 
 
 def create_page(root_page, child_title):
